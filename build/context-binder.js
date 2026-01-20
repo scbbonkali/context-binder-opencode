@@ -49,27 +49,27 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.contextBindingPlugin = void 0;
 var plugin_1 = require("@opencode-ai/plugin");
-var fs = require("fs");
-var os = require("os");
-var path = require("path");
+var fs_1 = require("fs");
+var os_1 = require("os");
+var path_1 = require("path");
 // ------------------------- STATE PATH (PORTABLE) -------------------------
 // Prefer XDG_STATE_HOME, fallback to ~/.local/share/opencode, then OS temp as last resort
 var BASE_STATE_DIR = process.env.XDG_STATE_HOME ||
-    path.join(os.homedir(), ".local", "share", "opencode");
+    path_1.default.join(os_1.default.homedir(), ".local", "share", "opencode");
 function getStateFile() {
     try {
-        fs.mkdirSync(BASE_STATE_DIR, { recursive: true });
-        return path.join(BASE_STATE_DIR, "context-binding-state.json");
+        fs_1.default.mkdirSync(BASE_STATE_DIR, { recursive: true });
+        return path_1.default.join(BASE_STATE_DIR, "context-binding-state.json");
     }
     catch (_a) {
-        return path.join(os.tmpdir(), "context-binding-state.json");
+        return path_1.default.join(os_1.default.tmpdir(), "context-binding-state.json");
     }
 }
 function loadState() {
     try {
         var file = getStateFile();
-        if (fs.existsSync(file)) {
-            return JSON.parse(fs.readFileSync(file, "utf8"));
+        if (fs_1.default.existsSync(file)) {
+            return JSON.parse(fs_1.default.readFileSync(file, "utf8"));
         }
     }
     catch (_a) {
@@ -79,7 +79,7 @@ function loadState() {
 }
 function saveState(state) {
     try {
-        fs.writeFileSync(getStateFile(), JSON.stringify(state, null, 2));
+        fs_1.default.writeFileSync(getStateFile(), JSON.stringify(state, null, 2));
     }
     catch (e) {
         console.error("Context Binding: failed to save state", e);

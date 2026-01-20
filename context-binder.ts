@@ -1,7 +1,7 @@
 import { tool } from "@opencode-ai/plugin";
-import fs from "fs";
-import os from "os";
-import path from "path";
+import * as fs from "fs";
+import * as os from "os";
+import * as path from "path";
 
 // ------------------------- STATE PATH (PORTABLE) -------------------------
 // Prefer XDG_STATE_HOME, fallback to ~/.local/share/opencode, then OS temp as last resort

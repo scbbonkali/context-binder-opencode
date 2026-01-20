@@ -3,7 +3,7 @@
 Copy plugin files:
 
 ```bash
-cp index.js ~/.config/opencode/plugin/context-binding.js
+cp build/context-binder.js ~/.config/opencode/plugin/context-binding.js
 cp package.json ~/.config/opencode/plugin/context-binding.json
 ```
 

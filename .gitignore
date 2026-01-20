@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+.env
+CHEATSHEET.md
+# build/ is now committed, so users can download built file

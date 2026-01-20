@@ -10,7 +10,7 @@ Deterministic, message-count based context limiting for Opencode.
 
 ## Installation
 ```bash
-cp index.js ~/.config/opencode/plugin/context-binding.js
+cp build/index.js ~/.config/opencode/plugin/context-binding.js
 cp package.json ~/.config/opencode/plugin/context-binding.json
 opencode
 ```

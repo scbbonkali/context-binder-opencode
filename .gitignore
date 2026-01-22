@@ -1,7 +1,22 @@
+# Node modules
 node_modules/
+
+# Build / compiled output
 dist/
-*.log
-.DS_Store
-.env
-CHEATSHEET.md
 build/
+
+# Logs
+*.log
+
+# MacOS temp files
+.DS_Store
+
+# Environment variables
+.env
+
+# Misc
+CHEATSHEET.md
+
+# Generic temp / backup files
+*.tmp
+*.bak

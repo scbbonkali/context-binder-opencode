@@ -1,3 +1,5 @@
+# this plugin is no longer needed for recent opencode versions and is not compatible with v2.0
+
 # 🔒 OpenCode Context Binding Plugin
 
 Deterministic, message-count–based context limiting for OpenCode conversations.

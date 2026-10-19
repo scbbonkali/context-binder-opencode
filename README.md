@@ -1,4 +1,4 @@
-# this plugin is no longer needed for recent opencode versions and is not compatible with v2.0
+# this plugin is not compatible with Opencode v2.0
 
 # 🔒 OpenCode Context Binding Plugin
 
